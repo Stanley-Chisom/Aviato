@@ -1,0 +1,14 @@
+package routes
+
+import (
+	"Aviato/server/controllers"
+
+	"github.com/gofiber/fiber/v2"
+)
+
+func FlightRoutes(app *fiber.App) {
+	flightGroup := app.Get("/api")
+
+	flightGroup.Get("/flight/:flightNumber", controllers.GetFlightInfo)
+	flightGroup.Get("/live-flights", controllers.GetLiveFlightData)
+}
