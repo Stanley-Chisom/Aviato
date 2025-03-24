@@ -7,7 +7,7 @@ import (
 )
 
 func FlightRoutes(app *fiber.App) {
-	flightGroup := app.Get("/api")
+	flightGroup := app.Group("/api")
 
 	flightGroup.Get("/flight/:flightNumber", controllers.GetFlightInfo)
 	flightGroup.Get("/live-flights", controllers.GetLiveFlightData)

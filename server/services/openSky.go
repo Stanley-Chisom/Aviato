@@ -20,5 +20,10 @@ func GetLiveFlightData() (string, error) {
 	if err != nil {
 		log.Println("Error fetching real-time flight data:", err)
 	}
+
+	if res.StatusCode() == 401 {
+		log.Println("Unauthorized! Check openSky credentials")
+	}
+
 	return res.String(), nil
 }
