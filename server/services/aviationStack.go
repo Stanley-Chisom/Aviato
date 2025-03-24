@@ -14,7 +14,9 @@ func GetFlightInfo(flightNumber string) (string, error) {
 	client := resty.New()
 	apiKey := config.GetEnv("AVIATIONSTACK_API_KEY")
 
-	url := fmt.Sprintf("%s?access_key=%s&flight_iata=%s", aviationStackURL, apiKey, flightNumber)
+	url := fmt.Sprintf(
+		"%s?access_key=%s&flight_iata=%s", 
+		aviationStackURL, apiKey, flightNumber)
 
 	res, err := client.R().Get(url)
 
