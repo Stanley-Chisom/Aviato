@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Aviato/server/config"
-	"Aviato/server/routes"
+	"Aviato/config"
+	"Aviato/routes"
 	"log"
 
 	"github.com/gofiber/fiber/v2"

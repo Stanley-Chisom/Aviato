@@ -1,7 +1,7 @@
 package services
 
 import (
-	"Aviato/server/config"
+	"Aviato/config"
 	"log"
 
 	"github.com/go-resty/resty/v2"

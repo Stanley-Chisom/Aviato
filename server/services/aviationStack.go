@@ -1,7 +1,7 @@
 package services
 
 import (
-	"Aviato/server/config"
+	"Aviato/config"
 	"fmt"
 	"log"
 

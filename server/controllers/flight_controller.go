@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"Aviato/server/services"
+	"Aviato/services"
 	"github.com/gofiber/fiber/v2"
 )
 
